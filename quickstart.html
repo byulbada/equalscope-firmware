@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Equalscope 퀵스타트 가이드</title>
+<!--
+  인쇄용 퀵스타트 1장 (양면).
+  사용법: 브라우저로 열기 → Ctrl+P → 용지 A5(권장) 또는 A4 → 배경 그래픽 켜기 → 인쇄/PDF 저장.
+  [사진: ___] / [QR] 자리는 이미지로 교체하세요.
+  색을 흰 배경 → 딥네이비 배경으로 바꾸려면 :root 의 --paper / --ink 변수를 조정.
+-->
+<style>
+  :root{
+    --navy:#0d2137;
+    --navy2:#16314f;
+    --orange:#ff6b1a;
+    --paper:#ffffff;
+    --ink:#1a1a1a;
+    --muted:#5b6b7a;
+    --line:#d8dee5;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{font-family:"Malgun Gothic","Noto Sans KR",sans-serif;color:var(--ink);background:#e9edf1;}
+  .page{
+    width:148mm;height:210mm;            /* A5 세로 */
+    background:var(--paper);
+    margin:8mm auto;padding:12mm 11mm;
+    position:relative;overflow:hidden;
+    box-shadow:0 1px 6px rgba(0,0,0,.15);
+  }
+
+  /* ── 헤더 ── */
+  .head{display:flex;align-items:baseline;gap:8px;border-bottom:3px solid var(--orange);padding-bottom:7px;margin-bottom:11px;}
+  .brand{font-size:26px;font-weight:800;color:var(--orange);letter-spacing:-.5px;}
+  .brand b{color:inherit;}
+  .tagline{font-size:11px;color:var(--muted);margin-left:auto;}
+  .doctype{font-size:13px;font-weight:700;color:var(--navy);letter-spacing:2px;}
+
+  h2.sec{font-size:14px;color:var(--navy);margin:14px 0 8px;padding-left:8px;border-left:4px solid var(--orange);}
+
+  /* ── 5단계 ── */
+  .steps{display:flex;flex-direction:column;gap:9px;}
+  .step{display:flex;gap:11px;align-items:flex-start;}
+  .num{flex:0 0 30px;height:30px;border-radius:50%;background:var(--orange);color:#fff;
+       font-weight:800;font-size:15px;display:flex;align-items:center;justify-content:center;}
+  .step .body{flex:1;}
+  .step .ttl{font-size:13.5px;font-weight:700;color:var(--navy);}
+  .step .desc{font-size:12px;color:#333;line-height:1.5;margin-top:2px;}
+  .step .desc em{color:var(--orange);font-style:normal;font-weight:700;}
+  .imgbox{flex:0 0 34mm;height:24mm;border:1px dashed #b9c2cc;border-radius:4px;
+          display:flex;align-items:center;justify-content:center;color:#9aa7b3;font-size:10px;text-align:center;}
+
+  .warn{margin-top:12px;background:#fff4ec;border:1px solid #ffd2b3;border-radius:6px;
+        padding:8px 11px;font-size:11px;color:#a8430a;line-height:1.5;}
+
+  /* ── 뒷면 표 ── */
+  .grid2{display:flex;gap:9mm;}
+  .col{flex:1;}
+  table{width:100%;border-collapse:collapse;font-size:11.5px;}
+  td{padding:5px 4px;border-bottom:1px solid var(--line);vertical-align:top;}
+  td.k{font-weight:700;color:var(--navy);white-space:nowrap;width:30%;}
+  .ico{display:inline-block;width:16px;color:var(--orange);font-weight:800;}
+
+  .qrwrap{margin-top:8px;text-align:center;}
+  .qrbox{width:32mm;height:32mm;border:1px dashed #b9c2cc;border-radius:4px;margin:0 auto;
+         display:flex;align-items:center;justify-content:center;color:#9aa7b3;font-size:10px;}
+  .qrcap{font-size:10.5px;color:var(--muted);margin-top:5px;}
+
+  .foot{position:absolute;left:11mm;right:11mm;bottom:9mm;border-top:1px solid var(--line);
+        padding-top:6px;font-size:9.5px;color:var(--muted);display:flex;justify-content:space-between;}
+  .safe{margin-top:11px;font-size:10.5px;color:#a8430a;background:#fff4ec;border-radius:6px;padding:7px 10px;line-height:1.5;}
+
+  @media print{
+    html,body{background:#fff;}
+    .page{margin:0;box-shadow:none;page-break-after:always;}
+    @page{size:A5;margin:0;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ════════ 앞면 ════════ -->
+<section class="page">
+  <div class="head">
+    <div class="brand">Equal<b>scope</b></div>
+    <div class="tagline">이퀄라이징 훈련 측정 장비</div>
+  </div>
+  <div class="doctype">QUICK START · 빠른 시작</div>
+
+  <h2 class="sec">5단계로 첫 측정까지</h2>
+  <div class="steps">
+
+    <div class="step">
+      <div class="num">1</div>
+      <div class="body">
+        <div class="ttl">구성품 확인</div>
+        <div class="desc">본체 · 이퀄 벤트 · 4mm 튜브 · 압력 조절 밸브를 확인합니다.</div>
+      </div>
+      <div class="imgbox">[사진: 구성품]</div>
+    </div>
+
+    <div class="step">
+      <div class="num">2</div>
+      <div class="body">
+        <div class="ttl">연결하기</div>
+        <div class="desc">튜브를 본체와 이퀄 벤트에 원터치로 연결합니다.</div>
+      </div>
+      <div class="imgbox">[사진: 연결]</div>
+    </div>
+
+    <div class="step">
+      <div class="num">3</div>
+      <div class="body">
+        <div class="ttl">전원 켜기</div>
+        <div class="desc">전원 버튼을 <em>3초간</em> 누릅니다. 부팅 후 <em>약 5초간 영점 보정</em> —
+          이때는 압력을 가하지 말고 그대로 두세요.</div>
+      </div>
+      <div class="imgbox">[사진: 전원]</div>
+    </div>
+
+    <div class="step">
+      <div class="num">4</div>
+      <div class="body">
+        <div class="ttl">측정하기</div>
+        <div class="desc"><em>[시작]</em>을 누른 뒤, 이퀄 벤트를 <em>코에 갖다 대고</em> 이퀄라이징을 합니다.
+          실시간 그래프로 압력이 그려집니다. 마치면 <em>[정지]</em>.</div>
+      </div>
+      <div class="imgbox">[사진: 측정 화면]</div>
+    </div>
+
+    <div class="step">
+      <div class="num">5</div>
+      <div class="body">
+        <div class="ttl">결과 보기</div>
+        <div class="desc">정지하면 자동 저장됩니다. <em>[분석]</em>을 누르면 패턴 분류와 조언을 볼 수 있습니다.</div>
+      </div>
+      <div class="imgbox">[사진: 분석 화면]</div>
+    </div>
+
+  </div>
+
+  <div class="warn">⚠️ <b>영점 보정(켤 때 약 5초)</b> 동안에는 이퀄 벤트를 코에 대거나 튜브에 압력을 가하지 마세요.
+    이 기준점이 측정 정확도를 좌우합니다.</div>
+
+  <div class="foot"><span>Equalscope Quick Start</span></div>
+</section>
+
+<!-- ════════ 뒷면 ════════ -->
+<section class="page">
+  <div class="head">
+    <div class="brand">Equal<b>scope</b></div>
+    <div class="tagline">버튼 · 제스처 · 도움말</div>
+  </div>
+
+  <div class="grid2">
+    <div class="col">
+      <h2 class="sec">화면 버튼</h2>
+      <table>
+        <tr><td class="k">시작</td><td>측정 시작 → 측정 중 <b>정지</b> → 정지 후 <b>분석</b></td></tr>
+        <tr><td class="k">파일</td><td>저장된 측정·참조 그래프 보기</td></tr>
+        <tr><td class="k">리셋</td><td>그래프 초기화, 시작 상태로</td></tr>
+        <tr><td class="k">설정</td><td>테마·밝기·알람·메트로놈 등</td></tr>
+        <tr><td class="k">전원</td><td>눌러서 끄기 (아이콘만 표시)</td></tr>
+      </table>
+
+      <h2 class="sec">제스처</h2>
+      <table>
+        <tr><td class="k">핀치</td><td>그래프 시간축 줌 인/아웃</td></tr>
+        <tr><td class="k">스와이프</td><td>그래프 좌우 스크롤</td></tr>
+        <tr><td class="k">3손가락 탭</td><td>화면 스크린샷 (SD 카드 필요)</td></tr>
+      </table>
+    </div>
+
+    <div class="col">
+      <h2 class="sec">전원 끄기</h2>
+      <table>
+        <tr><td><span class="ico">•</span>물리 전원 버튼 <b>3초</b> 길게</td></tr>
+        <tr><td><span class="ico">•</span>또는 화면의 <b>[전원]</b> 버튼</td></tr>
+      </table>
+
+      <h2 class="sec">참조 그래프</h2>
+      <table>
+        <tr><td>모범 그래프를 배경에 깔고 내 측정과 <b>겹쳐 비교</b>하며 훈련.
+          파일 → 참조 탭에서 <b>열기</b>로 불러옵니다.</td></tr>
+        <tr><td>해제하려면 참조 탭에서 <b>[해제]</b> 버튼을 누릅니다.</td></tr>
+      </table>
+
+      <h2 class="sec">상세 매뉴얼</h2>
+      <div class="qrwrap">
+        <div class="qrbox">[QR]</div>
+        <div class="qrcap">전체 사용법 · 분석 해석 보기</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="safe">의료기기가 아닙니다. 측정·분석은 <b>훈련 보조 및 참고용</b>입니다.
+    무리한 압력을 가하지 말고, 자격 있는 강사의 지도 아래 훈련하세요.</div>
+
+  <div class="foot"><span>© Equalscope</span></div>
+</section>
+
+</body>
+</html>
