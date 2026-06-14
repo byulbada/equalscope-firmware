@@ -4,56 +4,66 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Equalscope 다운로드 — 펌웨어 · 매뉴얼</title>
-<meta name="description" content="Equalscope 최신 펌웨어와 사용설명서 다운로드.">
+<meta name="description" content="Equalscope 펌웨어와 사용설명서 다운로드. 버전별 변경 내용과 다운로드 링크.">
 <style>
   :root{--navy:#0d2137;--navy3:#1f3c5c;--orange:#ff6b1a;--orange-d:#e85a0c;}
   *{box-sizing:border-box;margin:0;padding:0;}
-  body{min-height:100vh;background:radial-gradient(120% 100% at 80% 0%,var(--navy3),var(--navy) 60%);
+  body{min-height:100vh;background:radial-gradient(120% 90% at 80% 0%,var(--navy3),var(--navy) 60%);
        color:#fff;font-family:"Pretendard","Malgun Gothic","Apple SD Gothic Neo","Noto Sans KR",sans-serif;
-       display:flex;align-items:center;justify-content:center;padding:40px 20px;}
-  .wrap{width:100%;max-width:560px;text-align:center;}
-  .brand{font-size:30px;font-weight:800;color:var(--orange);letter-spacing:-.5px;}
-  h1{font-size:24px;font-weight:700;color:#dfe7ef;margin:6px 0 30px;}
-  .btn{display:block;background:var(--orange);color:#fff;font-size:19px;font-weight:800;
-       padding:20px;border-radius:14px;text-decoration:none;box-shadow:0 10px 26px rgba(255,107,26,.3);}
-  .btn:hover{background:var(--orange-d);}
-  .btn small{display:block;font-size:13px;font-weight:600;opacity:.9;margin-top:4px;}
-  .note{font-size:14px;color:#aebfcf;line-height:1.6;margin:18px 0 28px;}
-  .note a{color:var(--orange);text-decoration:none;}
-  .links{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
-  .links a{flex:1;min-width:140px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);
-           color:#dfe7ef;text-decoration:none;font-weight:700;font-size:15px;padding:14px;border-radius:12px;}
+       display:flex;align-items:flex-start;justify-content:center;padding:56px 22px;}
+  .wrap{width:100%;max-width:840px;}
+  .brand{font-size:30px;font-weight:800;color:var(--orange);letter-spacing:-.5px;text-align:center;}
+  h1{font-size:24px;font-weight:700;color:#dfe7ef;margin:6px 0 22px;text-align:center;}
+  .intro{font-size:14.5px;color:#aebfcf;line-height:1.65;text-align:center;max-width:600px;margin:0 auto 30px;}
+  .intro a{color:var(--orange);text-decoration:none;}
+
+  .history h2{font-size:17px;color:#dfe7ef;font-weight:700;margin-bottom:14px;}
+  table{width:100%;border-collapse:collapse;font-size:14.5px;}
+  thead th{color:#8aa0b8;font-weight:700;font-size:12.5px;text-align:left;padding:0 10px 10px;border-bottom:1px solid rgba(255,255,255,.18);}
+  tbody td{padding:14px 10px;border-bottom:1px solid rgba(255,255,255,.12);color:#c4d3e2;vertical-align:top;line-height:1.55;}
+  td.ver{font-weight:800;color:#fff;white-space:nowrap;}
+  td.date{white-space:nowrap;color:#9fb4c9;}
+  td.dl{text-align:right;white-space:nowrap;}
+  .latest{display:inline-block;background:var(--orange);color:#fff;font-size:10.5px;font-weight:800;
+          padding:2px 8px;border-radius:999px;margin-left:6px;vertical-align:middle;}
+  .dlbtn{display:inline-block;background:var(--orange);color:#fff;font-weight:800;font-size:14px;
+         text-decoration:none;padding:10px 20px;border-radius:999px;}
+  .dlbtn:hover{background:var(--orange-d);}
+  .dlbtn small{font-weight:600;font-size:11px;opacity:.85;}
+
+  .links{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:38px;}
+  .links a{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);color:#dfe7ef;
+           text-decoration:none;font-weight:700;font-size:15px;padding:13px 22px;border-radius:12px;}
   .links a:hover{background:rgba(255,255,255,.16);}
-  .foot{margin-top:28px;font-size:13px;color:#7c91a6;}
+  .foot{margin-top:26px;font-size:13px;color:#7c91a6;text-align:center;}
   .foot a{color:var(--orange);text-decoration:none;}
-  .history{margin:32px 0 6px;text-align:left;}
-  .history h2{font-size:16px;color:#dfe7ef;font-weight:700;margin-bottom:12px;text-align:center;}
-  .history table{width:100%;border-collapse:collapse;font-size:13.5px;}
-  .history th,.history td{border-bottom:1px solid rgba(255,255,255,.14);padding:9px 8px;text-align:left;color:#c4d3e2;vertical-align:top;}
-  .history th{color:#8aa0b8;font-weight:700;font-size:12px;}
-  .history td:first-child{font-weight:800;color:#fff;white-space:nowrap;}
-  .history td:nth-child(2){white-space:nowrap;color:#9fb4c9;}
-  .history a{color:var(--orange);font-weight:700;text-decoration:none;white-space:nowrap;}
-  .history a:hover{text-decoration:underline;}
+
+  @media(max-width:600px){
+    table,thead,tbody,tr,td,th{display:block;}
+    thead{display:none;}
+    tbody tr{border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:12px;margin-bottom:14px;}
+    tbody td{border:0;padding:3px 0;}
+    td.dl{text-align:left;margin-top:8px;}
+  }
 </style>
 </head>
 <body>
   <div class="wrap">
     <div class="brand">Equalscope</div>
     <h1>다운로드</h1>
-
-    <a class="btn" href="https://github.com/byulbada/equalscope-firmware/releases/latest" target="_blank" rel="noopener">
-      최신 펌웨어 내려받기 (.bin)
-      <small>GitHub Releases · 최신 버전</small>
-    </a>
-    <p class="note">SD 카드 맨 위(루트) 폴더에 복사한 뒤 전원을 켜면 <b>자동으로 업데이트</b>됩니다.<br>자세한 방법은 <a href="../manual.html#sec9">사용설명서 9장</a>을 참고하세요.</p>
+    <p class="intro">펌웨어 파일(<b>.bin</b>)을 SD 카드 맨 위(루트) 폴더에 복사한 뒤 전원을 켜면 <b>자동으로 업데이트</b>됩니다. 자세한 방법은 <a href="../manual.html#sec9">사용설명서 9장</a>을 참고하세요.</p>
 
     <div class="history">
-      <h2>버전 기록</h2>
+      <h2>펌웨어 버전</h2>
       <table>
         <thead><tr><th>버전</th><th>날짜</th><th>변경 내용</th><th>다운로드</th></tr></thead>
         <tbody>
-          <tr><td>v1.1</td><td>2026-06-13</td><td>배터리 잔량(%) 표시 응답성 개선 — 충전 시 더 빠르고 안정적으로 반영</td><td><a href="https://github.com/byulbada/equalscope-firmware/releases/download/v1.1/equpdate_1.1.bin">.bin ↓</a></td></tr>
+          <tr>
+            <td class="ver">v1.1 <span class="latest">최신</span></td>
+            <td class="date">2026-06-13</td>
+            <td>배터리 잔량(%) 표시 응답성 개선 — 충전 시 더 빠르고 안정적으로 반영됩니다.</td>
+            <td class="dl"><a class="dlbtn" href="https://github.com/byulbada/equalscope-firmware/releases/download/v1.1/equpdate_1.1.bin">내려받기 <small>.bin</small></a></td>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -63,7 +73,6 @@
       <a href="../quickstart.html">빠른 시작</a>
       <a href="../">제품 소개</a>
     </div>
-
     <div class="foot">문의 · A/S → <a href="https://cafe.naver.com/byulbadalab" target="_blank" rel="noopener">네이버 별바다랩 카페</a></div>
   </div>
 </body>
