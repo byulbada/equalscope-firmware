@@ -85,6 +85,9 @@
     h2,h3,h4{page-break-after:avoid;}
     tr{page-break-inside:avoid;}
     a{color:var(--ink);text-decoration:none;}
+    /* 인쇄 시 표 헤더: 배경 그래픽 ON/OFF 모두 가독되도록 연회색 배경+어두운 볼드+navy 밑줄.
+       (배경색은 OFF면 안 찍히지만, 글자/테두리는 항상 찍혀 헤더가 또렷) */
+    th{background:#eef2f6;color:var(--ink);font-weight:800;border-bottom:2px solid var(--navy);}
     @page{size:A4;margin:16mm 14mm;}
   }
   figure.fig{margin:16px 0;text-align:center;}
