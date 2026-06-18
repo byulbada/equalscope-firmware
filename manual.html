@@ -77,7 +77,10 @@
   @media print{
     body{background:#fff;font-size:11.5pt;}
     .wrap{box-shadow:none;max-width:none;}
-    header{padding:18px 0 14px;}
+    header{padding:18px 0 14px;background:#fff;color:var(--ink);}
+    header h1{color:var(--ink);}
+    header .meta{color:#555;border-top-color:var(--line);}
+    footer{background:#fff;color:var(--ink);}
     main{padding:0;}
     /* 장·목차·표를 새 페이지로 강제 분리하지 않음 — 빈 공간 없이 이어서 흐르게.
        제목이 페이지 맨 끝에 혼자 남는 것(after:avoid)과, 표의 한 행이 페이지
