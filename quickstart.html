@@ -7,6 +7,12 @@
 <meta name="description" content="Equalscope 빠른 시작 가이드 — 앞면 브랜드 소개, 뒷면 기본 조작. 가방에 넣는 양면 카드.">
 <link rel="canonical" href="https://equalscope.kr/quickstart.html">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<!-- 브랜드 한글 폰트 Pretendard (동적 서브셋 — 필요한 글자만 로드) -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.css">
+<!-- 영문 워드마크 폰트 Montserrat SemiBold(600) — 제품 각인과 동일 -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap">
 <!--
   빠른 시작 — 양면 카드 (70×100mm, 2쪽: 앞면=브랜드, 뒷면=조작).
   사진 없이 텍스트·QR만. 가방에 넣는 단순 카드.
@@ -18,8 +24,8 @@
 <style>
   :root{
     --pw:70mm; --ph:100mm;                  /* 양면 카드 */
-    --navy:#0d2137; --orange:#ff6b1a; --orange-d:#e85a0c;
-    --ink:#1c2a38; --muted:#5b6b7a; --line:#dde3e9; --soft:#f4f7fa;
+    --navy:#0d2137; --orange:#FF6600; --orange-d:#e65c00;
+    --ink:#1c2a38; --muted:#5b6b7a; --line:#e2e8ee; --soft:#f4f7fa;
   }
   *{box-sizing:border-box;margin:0;padding:0;}
   body{background:#e9edf1;color:var(--ink);
@@ -38,7 +44,7 @@
   .front{align-items:center;text-align:center;justify-content:space-between;
          background:linear-gradient(160deg,#fff 60%,#fff6f0);}
   .front .mark{height:24mm;width:auto;margin-top:3mm;}
-  .front .title{font-size:32px;font-weight:800;color:var(--orange);letter-spacing:-.5px;line-height:1;}
+  .front .title{font-family:"Montserrat","Pretendard",sans-serif;font-size:32px;font-weight:600;color:var(--orange);letter-spacing:-.5px;line-height:1;}
 
   .front .qs{display:flex;flex-direction:column;align-items:center;gap:7px;}
   .front .doctype{font-size:11px;font-weight:700;letter-spacing:.34em;color:var(--muted);}
@@ -55,7 +61,7 @@
   .back{padding:4mm 6mm 10mm;}
   .back .head{display:flex;align-items:baseline;gap:6px;border-bottom:2px solid var(--orange);
               padding-bottom:4px;margin-bottom:6px;}
-  .back .brand{display:inline-flex;align-items:center;gap:5px;font-size:14px;font-weight:800;color:var(--orange);letter-spacing:-.3px;}
+  .back .brand{display:inline-flex;align-items:center;gap:5px;font-family:"Montserrat","Pretendard",sans-serif;font-size:14px;font-weight:600;color:var(--orange);letter-spacing:-.3px;}
   .back .brand .mk{height:15px;width:auto;margin:-3px 0;}
   .back .doctype{font-size:7.5px;font-weight:700;letter-spacing:.13em;color:var(--muted);margin-left:auto;}
 
